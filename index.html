@@ -44,16 +44,18 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      height: 64px;
+      height: 72px;
     }
 
     .nav-brand {
-      font-family: 'Lora', serif;
-      font-size: 1.05rem;
-      font-weight: 600;
-      color: var(--sage-dark);
       text-decoration: none;
-      white-space: nowrap;
+      display: flex;
+      align-items: center;
+    }
+
+    .nav-brand img {
+      height: 52px;
+      width: auto;
     }
 
     .nav-links {
@@ -84,10 +86,28 @@
 
     /* ── HERO ── */
     #hero {
+      text-align: center;
+    }
+
+    .hero-logo-band {
+      background: var(--white);
+      padding: 2.5rem 2rem 2rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0;
+    }
+
+    .hero-logo-band img {
+      max-width: min(480px, 85vw);
+      width: 100%;
+      height: auto;
+    }
+
+    .hero-content {
       background: linear-gradient(135deg, var(--sage-dark) 0%, var(--sage) 60%, #7a9e8a 100%);
       color: var(--white);
-      padding: 6rem 2rem 5rem;
-      text-align: center;
+      padding: 3.5rem 2rem 5rem;
     }
 
     #hero .eyebrow {
@@ -479,7 +499,8 @@
 
     /* ── RESPONSIVE ── */
     @media (max-width: 720px) {
-      nav { padding: 0 1rem; }
+      nav { padding: 0 1rem; height: 60px; }
+      .nav-brand img { height: 42px; }
       .nav-links { display: none; }
 
       #hero { padding: 4rem 1.5rem 3.5rem; }
@@ -497,7 +518,9 @@
 
 <!-- NAV -->
 <nav>
-  <a class="nav-brand" href="#hero">Melinda L. Jackson, LLLT</a>
+  <a class="nav-brand" href="#hero">
+    <img src="Logo-color.jpg" alt="Melinda L. Jackson, LLLT" />
+  </a>
   <ul class="nav-links">
     <li><a href="#about">About</a></li>
     <li><a href="#services">Services</a></li>
@@ -508,12 +531,17 @@
 
 <!-- HERO -->
 <section id="hero">
-  <p class="eyebrow">Whatcom County Family Law</p>
-  <h1>Accessible Legal Help<br>for Life's Hardest Moments</h1>
-  <p>Melinda L. Jackson is a Washington State Licensed Legal Technician providing professional family law assistance in Bellingham and Whatcom County — at a fraction of attorney costs.</p>
-  <div class="hero-actions">
-    <a href="#contact" class="btn btn-white">Schedule a Consultation</a>
-    <a href="#services" class="btn btn-outline">See Services</a>
+  <div class="hero-logo-band">
+    <img src="Logo-color.jpg" alt="Melinda L. Jackson, Limited License Legal Technician" />
+  </div>
+  <div class="hero-content">
+    <p class="eyebrow">Whatcom County Family Law</p>
+    <h1>Accessible Legal Help<br>for Life's Hardest Moments</h1>
+    <p>Melinda L. Jackson is a Washington State Licensed Legal Technician providing professional family law assistance in Bellingham and Whatcom County — at a fraction of attorney costs.</p>
+    <div class="hero-actions">
+      <a href="#contact" class="btn btn-white">Schedule a Consultation</a>
+      <a href="#services" class="btn btn-outline">See Services</a>
+    </div>
   </div>
 </section>
 
